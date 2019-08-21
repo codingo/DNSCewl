@@ -24,6 +24,7 @@ Take a list of domain names (using -tL) or a single target (using -t), a single 
 | --no-color | If set then any foreground or background colours will be stripped out |
 | -limit     | Specify a fixed word limit to output.                                 |
 | -level     | Specify the level of results to output. |
+| --no-repeats | Prevent repeated structures such as one.one.com |
 
 Level works in the following manner:
 
