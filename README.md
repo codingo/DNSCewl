@@ -7,6 +7,7 @@ Take a list of domain names (using -tL) or a single target (using -t), a single 
 
 | Argument   | Description                                                           |
 |------------|-----------------------------------------------------------------------|
+| (stdin)    | Specify a list of targets |
 | -t         | Specify a single target.                                              |
 | -tL        | Specify a list of targets.                                            |
 | -sL        | Specify a list of sets to substitue with                              |
