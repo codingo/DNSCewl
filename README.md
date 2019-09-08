@@ -9,6 +9,7 @@ Take a list of domain names (using -tL) or a single target (using -t), a single 
 |------------|-----------------------------------------------------------------------|
 | -t         | Specify a single target.                                              |
 | -tL        | Specify a list of targets.                                            |
+| -sL        | Specify a list of sets to substitue with                              |
 | -eL        | Specify a list of targets to exclude                                  |
 | -a         | Specify a file of words to append to a host                           |
 | -p         | Specify a file of words to prepend to a host                          |
