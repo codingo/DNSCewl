@@ -11,6 +11,7 @@ Take a list of domain names (using -tL) or a single target (using -t), a single 
 | -tL        | Specify a list of targets.                                            |
 | -sL        | Specify a list of sets to substitue with                              |
 | -eL        | Specify a list of targets to exclude                                  |
+| -eX        | Specify a list of domain extensions to substitute with |
 | -a         | Specify a file of words to append to a host                           |
 | -p         | Specify a file of words to prepend to a host                          |
 | -v         | If set then verbose output will be displayed in the terminal          |
@@ -26,6 +27,7 @@ Take a list of domain names (using -tL) or a single target (using -t), a single 
 There are multiple levels of changes that can be performed, specified by "-level". A level of "1" or above modifies the results to use a `-` as well as everything else. A level of 0 wouldn't use `-`. Level defaults to level 1.
 
 At level 2 integer substituions start to take place, using a set range.
+
 
 
 
@@ -215,3 +217,29 @@ Would generate domians from 91.example.com to 111.example.com. You can however s
 ```
 
 Would only generate domains from 101.example.com to 111.example.com as our output.
+
+# Domain Extensions (-eX)
+Takes a list of domain extensions and replaces extensions on final results with them.
+
+For example,
+
+```
+example.com
+sub.example.com
+```
+
+When combined with a list of extentions that includes:
+
+```
+.com.au
+.co.uk
+```
+
+Would result in a list of domains:
+
+```
+example.com.au
+example.co.uk
+sub.example.com.au
+sub.example.co.uk
+```
