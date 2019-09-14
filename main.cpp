@@ -41,7 +41,6 @@ int count_char(string domain, char character);
 
 void print_header()
 {
-	// courtesy of http://www.patorjk.com/software/taag/#p=display&f=Epic&t=FastSub
 	std::string header = R"sep(
 
 ▓█████▄  ███▄    █   ██████  ▄████▄  ▓█████  █     █░ ██▓    
