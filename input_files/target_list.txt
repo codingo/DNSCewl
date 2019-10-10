@@ -1,3 +1,5 @@
 example.com
 help.example.com
 test.example.com
+one.example.com
+101.example.com
