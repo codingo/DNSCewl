@@ -16,4 +16,7 @@ slave
 master
 review
 prod
+uat
+prep
+version2
 
