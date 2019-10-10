@@ -59,7 +59,7 @@ void print_header()
 
 Michael Skelton (@codingo)
 Luke Stephens (@hakluke)
-Sajeeb Lohani (sml555_)                                                        
+Sajeeb Lohani (@sml555_)                                                        
 	)sep";
 	spdlog::info("{}\n", header);
 }
