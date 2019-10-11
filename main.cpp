@@ -57,7 +57,7 @@ void print_header()
 ░▒████▓ ▒██░   ▓██░▒██████▒▒▒ ▓███▀ ░░▒████▒░░██▒██▓ ░██████▒
  ▒▒▓  ▒ ░ ▒░   ▒ ▒ ▒ ▒▓▒ ▒ ░░ ░▒ ▒  ░░░ ▒░ ░░ ▓░▒ ▒  ░ ▒░▓  ░
 
-Michael Skelton (@codingo)
+Michael Skelton (@codingo_)
 Luke Stephens (@hakluke)
 Sajeeb Lohani (@sml555_)                                                        
 	)sep";
