@@ -200,7 +200,7 @@ void process_append()
                 strncpy(a, targ.c_str(), location);
                 strcat(a, "-");
                 char temp[1024] = {};
-                strncpy(temp, appnd.c_str(), appnd.length() - 1);
+                strncpy(temp, appnd.c_str(), appnd.length());
                 strcat(a, temp);
                 strcat(a, targ.substr(location, targ.length() - location).c_str());
                 print_domain(string(a));
@@ -212,7 +212,7 @@ void process_append()
                     strncpy(b, targ.c_str(), location);
                     strcat(b, ".");
                     char temp1[1024] = {};
-                    strncpy(temp1, appnd.c_str(), appnd.length() - 1);
+                    strncpy(temp1, appnd.c_str(), appnd.length());
                     strcat(b, temp1);
                     strcat(b, targ.substr(location, targ.length() - location).c_str());
                     print_domain(string(b));
@@ -221,7 +221,7 @@ void process_append()
                 char c[1024] = {};
                 strncpy(c, targ.c_str(), location);
                 char temp2[1024] = {};
-                strncpy(temp2, appnd.c_str(), appnd.length() - 1);
+                strncpy(temp2, appnd.c_str(), appnd.length());
                 strcat(c, temp2);
                 strcat(c, targ.substr(location, targ.length() - location).c_str());
                 print_domain(string(c));
@@ -316,7 +316,7 @@ void process_prepend()
                 string targ = *target;
                 // First one
                 char a[1024] = {};
-                strncpy(a, prep.c_str(), prep.length() - 1);
+                strncpy(a, prep.c_str(), prep.length());
                 strcat(a, targ.c_str());
 
                 print_domain(string(a));
@@ -325,7 +325,7 @@ void process_prepend()
                 if (level != 1)
                 {
                     char b[1024] = {};
-                    strncpy(b, prep.c_str(), prep.length() - 1);
+                    strncpy(b, prep.c_str(), prep.length());
                     strcat(b, "-");
                     strcat(b, targ.c_str());
 
@@ -333,7 +333,7 @@ void process_prepend()
                 }
                 // Third one
                 char c[1024] = {};
-                strncpy(c, prep.c_str(), prep.length() - 1);
+                strncpy(c, prep.c_str(), prep.length());
                 strcat(c, ".");
                 strcat(c, targ.c_str());
 
