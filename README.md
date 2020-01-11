@@ -1,11 +1,7 @@
 # DNSCewl
 [![License](https://img.shields.io/badge/license-GPL3-_red.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html) [![Twitter](https://img.shields.io/badge/twitter-@codingo__-blue.svg)](https://twitter.com/codingo_)
 
-A DNS Bruteforcing Wordlist Generator
-
-Goal: when provided with a list of domain names, generate a wordlist of potential subdomains to be tested for.
-
-Take a list of domain names (using -tL) or a single target (using -t), a single request will be performed against each of them and then the top 100 words that are not HTML related will be added to our wordlis.
+A DNS Bruteforcing Wordlist Generator.
 
 | Argument   | Description                                                           |
 |------------|-----------------------------------------------------------------------|
