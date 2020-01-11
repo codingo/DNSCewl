@@ -1,4 +1,5 @@
 # DNSCewl
+[![License](https://img.shields.io/badge/license-GPL3-_red.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html) [![Twitter](https://img.shields.io/badge/twitter-@codingo__-blue.svg)](https://twitter.com/codingo_)
 A DNS Bruteforcing Wordlist Generator
 
 Goal: when provided with a list of domain names, generate a wordlist of potential subdomains to be tested for.
@@ -28,9 +29,6 @@ Take a list of domain names (using -tL) or a single target (using -t), a single 
 There are multiple levels of changes that can be performed, specified by "-level". A level of "1" or above modifies the results to use a `-` as well as everything else. A level of 0 wouldn't use `-`. Level defaults to level 1.
 
 At level 2 integer substituions start to take place, using a set range.
-
-
-
 
 # Append
 Append works by adding a new subdomain, as well as the word with a `-` and without (unless level is 0). So, for example:
