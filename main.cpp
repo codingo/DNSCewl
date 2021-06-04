@@ -129,7 +129,14 @@ void process_range()
         {
             if (is_number(*split))
             {
-                int n = stoi(*split);
+		int n;
+            	try {
+            		n = stoi(*split);
+            	}
+            	catch (...) {
+            		continue;
+            	}
+                //int n = stoi(*split);    
                 int lower = 0;
                 int upper = 0;
                 if (range == 0)
