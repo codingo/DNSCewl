@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <vector>
 #include <fstream>
 #include <cstddef>
@@ -204,10 +204,26 @@ void process_append()
 
                 // First level
                 char a[1024] = {};
+		if (location >= sizeof(a)-1) // the array should contain at least contain a '-' and a null byte
+		{
+		    cout << "Target " << targ << endl << "too long : Overflow" << endl;
+		    return;
+		}
                 strncpy(a, targ.c_str(), location);
                 strcat(a, "-");
                 char temp[1024] = {};
+		if(appnd.length() >= sizeof(temp))
+		{
+		    cout << "Append value " << appnd << endl << "too long : Overflow" << endl;
+		    return;
+		}
                 strncpy(temp, appnd.c_str(), appnd.length());
+                if((strlen(a)+strlen(temp) >=sizeof(a)) || (strlen(a)+targ.substr(location, targ.length() - location).length() >=sizeof(a)))
+		{
+		    cout << "Can't concatenate target and append, strings too long : Overflow" << endl;
+		    return;
+		}
+
                 strcat(a, temp);
                 strcat(a, targ.substr(location, targ.length() - location).c_str());
                 print_domain(string(a));
@@ -323,7 +339,22 @@ void process_prepend()
                 string targ = *target;
                 // First one
                 char a[1024] = {};
+                if (prep.length() >= sizeof(a)-1)
+		{
+		    cout << "Prepend " << prep << endl << "too long : Overflow" << endl;
+		    return;
+		}
                 strncpy(a, prep.c_str(), prep.length());
+		if(targ.length()> 1024) // this is to prevent integer overflow in the check below
+		{
+		    cout << "Target " << targ << endl << "is too long : Overflow" << endl;
+		    return;
+		}
+		if(strlen(a)+targ.length() >= sizeof(a)-1)
+		{
+		    cout << "Can't concatenate target and prepend, strings too long : Overflow" << endl;
+		    return;
+		}
                 strcat(a, targ.c_str());
 
                 print_domain(string(a));
